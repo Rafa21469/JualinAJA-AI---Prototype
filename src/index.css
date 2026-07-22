@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://static.figma.com/font/PlusJakartaSans_wght__2') format('woff2');
+}
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+:root { color: #202937; background: #fff8ee; }
+body { min-width: 320px; background: #fff8ee; }
+button { -webkit-tap-highlight-color: transparent; }
+::selection { background: #ffc5a9; color: #202937; }
+
+@keyframes float { 0%,100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-7px) rotate(-3deg); } }
+@keyframes reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.float-card { animation: float 4s ease-in-out infinite; }
+.reveal { animation: reveal .42s ease-out both; }
